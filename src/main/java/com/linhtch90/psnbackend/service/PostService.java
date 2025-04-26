@@ -109,7 +109,7 @@ public class PostService {
 
         System.out.println(inputUserId);
         System.out.println(IdPostId);
-//        Optional<UserEntity> optUser = userRepo.findById(IdObjectEntity IdPostId);
+
         responseObj.setStatus("success");
         responseObj.setMessage("success");
         postRepo.deleteById(String.valueOf(IdPostId));
