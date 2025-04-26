@@ -81,7 +81,7 @@ public class PostService {
                     existingPost.setImages(inputPost.getImages());
                 }
 
-                // Keep the original creation time but update the post
+                
                 
 
                 // Save the updated post
