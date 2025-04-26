@@ -104,8 +104,6 @@ public class PostController {
         return new ResponseEntity<>(postService.deleteProgress(ids), HttpStatus.OK);
     }
 
-    
-
     @PostMapping("/progress/following")
     public ResponseEntity<ResponseObjectService> getFollowingProgress(@RequestBody IdObjectEntity userId) {
         return new ResponseEntity<>(postService.getFollowingProgress(userId), HttpStatus.OK);
