@@ -226,7 +226,7 @@ public class PostService {
     }
 
     public ResponseObjectService updatePostByLove(DoubleIdObjectEntity doubleId) {
-        // id 1 - post Id, id 2 - user who liked post
+        
         ResponseObjectService responseObj = new ResponseObjectService();
         Optional<PostEntity> optPost = postRepo.findById(doubleId.getId1());
         if (optPost.isEmpty()) {
