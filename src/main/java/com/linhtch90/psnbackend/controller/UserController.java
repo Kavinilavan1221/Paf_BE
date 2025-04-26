@@ -82,7 +82,6 @@ public class UserController {
         userService.deleteUserById(String.valueOf(inputUserd.getId()));
         return ResponseEntity.ok("User with id " + inputUserd.getId() + " has been deleted");
 
-//        return new ResponseEntity<ResponseObjectService>(userService.deleteUser( inputUser.getId()), HttpStatus.OK);
     }
     @PostMapping("/users/signin")
     public ResponseEntity<ResponseObjectService> userSignIn(@RequestBody UserSignInEntity inputUser) {
