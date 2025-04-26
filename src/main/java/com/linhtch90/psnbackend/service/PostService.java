@@ -113,7 +113,7 @@ public class PostService {
         responseObj.setStatus("success");
         responseObj.setMessage("success");
         postRepo.deleteById(String.valueOf(IdPostId));
-//        responseObj.setPayload(postRepo.deleteById(IdObjectEntity IdPostId));
+
         return responseObj;
     }
 
