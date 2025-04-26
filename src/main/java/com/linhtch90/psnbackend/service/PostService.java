@@ -240,7 +240,7 @@ public class PostService {
             if (loveList == null) {
                 loveList = new ArrayList<>();
             }
-            // love and unlove a post
+            
             if (!loveList.contains(doubleId.getId2())) {
                 loveList.add(doubleId.getId2());
             } else {
