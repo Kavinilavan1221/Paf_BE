@@ -106,7 +106,7 @@ public class PostService {
     }
     public ResponseObjectService deletePost(IdObjectEntity inputUserId,IdObjectEntity IdPostId) {
         ResponseObjectService responseObj = new ResponseObjectService();
-//        inputPost.setCreatedAt(Instant.now());
+
         System.out.println(inputUserId);
         System.out.println(IdPostId);
 //        Optional<UserEntity> optUser = userRepo.findById(IdObjectEntity IdPostId);
