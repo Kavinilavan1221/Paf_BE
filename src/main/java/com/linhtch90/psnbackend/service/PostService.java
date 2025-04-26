@@ -198,7 +198,7 @@ public class PostService {
             responseObj.setPayload(null);
             return responseObj;
         } else {
-            // inputPost.setCreatedAt(Instant.now());
+            
             postRepo.save(inputPost);
             responseObj.setStatus("success");
             responseObj.setMessage("post is updated successfully");
