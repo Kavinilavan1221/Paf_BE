@@ -24,7 +24,7 @@ public class EducationalContentService {
     @Autowired
     private UserRepository userRepo;
 
-    // Create new educational content
+    // Creating a new educational content
     public ResponseObjectService createContent(EducationalContentEntity content) {
         ResponseObjectService responseObj = new ResponseObjectService();
         try {
