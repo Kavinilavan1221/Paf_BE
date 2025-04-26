@@ -76,7 +76,7 @@ public class PostService {
                 }
 
 
-//                }
+
                 if (inputPost.getImages() != null) {
                     existingPost.setImages(inputPost.getImages());
                 }
