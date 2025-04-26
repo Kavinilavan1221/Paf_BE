@@ -96,8 +96,6 @@ public class PostController {
 
     @PutMapping("/progress/update")
     public ResponseEntity<ResponseObjectService> updateProgress(@RequestBody ProgressEntity progress) {
-       
-       
         return new ResponseEntity<>(postService.updateProgress(progress), HttpStatus.OK);
     }
 
