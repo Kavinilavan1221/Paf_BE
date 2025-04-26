@@ -74,9 +74,9 @@ public class PostService {
                 if (inputPost.getContent() != null) {
                     existingPost.setContent(inputPost.getContent());
                 }
-//                if (inputPost.getLongDesc() != null) {
-//                    existingPost.setLongDesc(inputPost.getLongDesc());
-//                }
+
+
+
                 if (inputPost.getImages() != null) {
                     existingPost.setImages(inputPost.getImages());
                 }
@@ -106,14 +106,14 @@ public class PostService {
     }
     public ResponseObjectService deletePost(IdObjectEntity inputUserId,IdObjectEntity IdPostId) {
         ResponseObjectService responseObj = new ResponseObjectService();
-//        inputPost.setCreatedAt(Instant.now());
+
         System.out.println(inputUserId);
         System.out.println(IdPostId);
-//        Optional<UserEntity> optUser = userRepo.findById(IdObjectEntity IdPostId);
+
         responseObj.setStatus("success");
         responseObj.setMessage("success");
         postRepo.deleteById(String.valueOf(IdPostId));
-//        responseObj.setPayload(postRepo.deleteById(IdObjectEntity IdPostId));
+
         return responseObj;
     }
 
@@ -198,7 +198,7 @@ public class PostService {
             responseObj.setPayload(null);
             return responseObj;
         } else {
-            // inputPost.setCreatedAt(Instant.now());
+            
             postRepo.save(inputPost);
             responseObj.setStatus("success");
             responseObj.setMessage("post is updated successfully");
@@ -226,7 +226,7 @@ public class PostService {
     }
 
     public ResponseObjectService updatePostByLove(DoubleIdObjectEntity doubleId) {
-        // id 1 - post Id, id 2 - user who liked post
+        
         ResponseObjectService responseObj = new ResponseObjectService();
         Optional<PostEntity> optPost = postRepo.findById(doubleId.getId1());
         if (optPost.isEmpty()) {
