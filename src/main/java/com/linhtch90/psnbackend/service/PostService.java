@@ -75,7 +75,7 @@ public class PostService {
                     existingPost.setContent(inputPost.getContent());
                 }
 
-//                    existingPost.setLongDesc(inputPost.getLongDesc());
+
 //                }
                 if (inputPost.getImages() != null) {
                     existingPost.setImages(inputPost.getImages());
