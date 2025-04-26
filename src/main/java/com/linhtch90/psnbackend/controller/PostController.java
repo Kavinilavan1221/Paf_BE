@@ -50,12 +50,6 @@ public class PostController {
         return new ResponseEntity<ResponseObjectService>(postService.findPostByFollowing(inputUserId), HttpStatus.OK);
     }
 
-    // currently not in use, post is update via comment controller
-    // @PutMapping("/updatebycomment")
-    // public ResponseEntity<ResponseObjectService> updateByComment(@RequestBody PostEntity inputPost) {
-    //     return new ResponseEntity<ResponseObjectService>(postService.updatePostByComment(inputPost), HttpStatus.OK);
-    // }
-
     @PostMapping("/lovepost")
     public ResponseEntity<ResponseObjectService> lovePost(@RequestBody DoubleIdObjectEntity doubleId) {
         return new ResponseEntity<ResponseObjectService>(postService.updatePostByLove(doubleId), HttpStatus.OK);
@@ -84,7 +78,7 @@ public class PostController {
     public ResponseEntity<ResponseObjectService> isPostSaved(@RequestBody SavePostRequest request) {
         return new ResponseEntity<>(postService.isPostSaved(request), HttpStatus.OK);
     }
-    
+
     @PostMapping("/progress/create")
     public ResponseEntity<ResponseObjectService> createProgress(@RequestBody ProgressEntity progress) {
         return new ResponseEntity<>(postService.createProgress(progress), HttpStatus.OK);
