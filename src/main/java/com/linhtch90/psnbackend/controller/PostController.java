@@ -87,8 +87,6 @@ public class PostController {
     @PostMapping("/progress/user")
     public ResponseEntity<ResponseObjectService> getUserProgress(@RequestBody IdObjectEntity userId) {
         return new ResponseEntity<>(postService.getUserProgress(userId), HttpStatus.OK);
-
-        
     }
 
     @PostMapping("/progress/get")
