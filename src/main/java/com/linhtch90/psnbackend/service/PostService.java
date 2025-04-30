@@ -65,7 +65,7 @@ public class PostService {
 
         try {
             // Find the existing post first
-            
+            Optional<PostEntity> existingPostOpt = postRepo.findById(inputPost.getId());
 
             if (existingPostOpt.isPresent()) {
                 PostEntity existingPost = existingPostOpt.get();
