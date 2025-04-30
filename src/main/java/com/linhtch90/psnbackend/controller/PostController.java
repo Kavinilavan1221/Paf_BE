@@ -14,11 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
     @Autowired
     private PostService postService;
-    @PostMapping("/allposts")
-    public ResponseEntity<ResponseObjectService> findAllUsers() {
-        System.out.println("hiihi");
-        return new ResponseEntity<ResponseObjectService>(postService.findAll(), HttpStatus.OK);
-    }
+    
     @PostMapping("/insertpost")
     public ResponseEntity<ResponseObjectService> insertPost(@RequestBody PostEntity inputPost) {
         return new ResponseEntity<ResponseObjectService>(postService.insertPost(inputPost), HttpStatus.OK);
