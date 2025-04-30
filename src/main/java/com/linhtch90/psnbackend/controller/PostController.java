@@ -23,7 +23,14 @@ public class PostController {
     public ResponseEntity<ResponseObjectService> insertPost(@RequestBody PostEntity inputPost) {
         return new ResponseEntity<ResponseObjectService>(postService.insertPost(inputPost), HttpStatus.OK);
     }
-    
+    @DeleteMapping("/deletepost")
+    public ResponseEntity<ResponseObjectService> deletePost(@RequestBody IdObjectEntity inputUserId) {
+        System.out.println("Deleting post with ID: " + inputUserId.getId());
+        ResponseObjectService response = postService.deleteUserPost(inputUserId);
+        return new ResponseEntity<>(response,
+                response.getStatus().equals("success") ?
+                        HttpStatus.OK : HttpStatus.NOT_FOUND);
+    }
 
     @PutMapping("/editpost")
     public ResponseEntity<ResponseObjectService> deletePost(@RequestBody PostEntity inputPost) {
