@@ -52,12 +52,7 @@ public class PostService {
                 responseObj.setStatus("fail");
                 responseObj.setMessage("Cannot find post with id: " + id.getId());
             }
-        } catch (Exception e) {
-            System.err.println("Error deleting post: " + e.getMessage());
-            e.printStackTrace();
-            responseObj.setStatus("fail");
-            responseObj.setMessage("Failed to delete post: " + e.getMessage());
-        }
+        } 
         return responseObj;
     }
     public ResponseObjectService editUserPost(PostEntity inputPost) {
