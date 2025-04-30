@@ -19,10 +19,7 @@ public class PostController {
         System.out.println("hiihi");
         return new ResponseEntity<ResponseObjectService>(postService.findAll(), HttpStatus.OK);
     }
-    @PostMapping("/insertpost")
-    public ResponseEntity<ResponseObjectService> insertPost(@RequestBody PostEntity inputPost) {
-        return new ResponseEntity<ResponseObjectService>(postService.insertPost(inputPost), HttpStatus.OK);
-    }
+    
     @DeleteMapping("/deletepost")
     public ResponseEntity<ResponseObjectService> deletePost(@RequestBody IdObjectEntity inputUserId) {
         System.out.println("Deleting post with ID: " + inputUserId.getId());
