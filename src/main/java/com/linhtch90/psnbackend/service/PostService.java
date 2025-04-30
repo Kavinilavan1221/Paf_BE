@@ -29,14 +29,7 @@ public class PostService {
         responseObj.setMessage("success");
         return responseObj;
     }
-    public ResponseObjectService insertPost(PostEntity inputPost) {
-        ResponseObjectService responseObj = new ResponseObjectService();
-        inputPost.setCreatedAt(Instant.now());
-        responseObj.setStatus("success");
-        responseObj.setMessage("success");
-        responseObj.setPayload(postRepo.save(inputPost));
-        return responseObj;
-    }
+    
     public ResponseObjectService deleteUserPost(IdObjectEntity id) {
         ResponseObjectService responseObj = new ResponseObjectService();
         try {
