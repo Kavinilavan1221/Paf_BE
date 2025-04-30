@@ -50,11 +50,7 @@ public class PostController {
         return new ResponseEntity<ResponseObjectService>(postService.findPostByFollowing(inputUserId), HttpStatus.OK);
     }
 
-    // currently not in use, post is update via comment controller
-    // @PutMapping("/updatebycomment")
-    // public ResponseEntity<ResponseObjectService> updateByComment(@RequestBody PostEntity inputPost) {
-    //     return new ResponseEntity<ResponseObjectService>(postService.updatePostByComment(inputPost), HttpStatus.OK);
-    // }
+    
 
     @PostMapping("/lovepost")
     public ResponseEntity<ResponseObjectService> lovePost(@RequestBody DoubleIdObjectEntity doubleId) {
