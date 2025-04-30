@@ -71,10 +71,7 @@ public class PostService {
                 PostEntity existingPost = existingPostOpt.get();
 
                 // Update only the fields that were provided in the input
-                if (inputPost.getContent() != null) {
-                    existingPost.setContent(inputPost.getContent());
-                }
-
+                
 
 
                 if (inputPost.getImages() != null) {
